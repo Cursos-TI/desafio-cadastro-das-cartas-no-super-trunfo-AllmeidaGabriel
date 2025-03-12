@@ -6,6 +6,8 @@ int main() {
     char cidade_1[50];
     int populacao_1, turistico_1;
     float area_1, pib_1;
+    float densidade_1;
+    float pibcarpita_1;
 
     printf("Digite os dados da Carta 01! \n");
 
@@ -30,12 +32,17 @@ int main() {
     printf("Digite a quantidade de pontos turísticos da cidade: \n");
     scanf("%d", &turistico_1);
 
+    densidade_1 = (float) populacao_1 / area_1;
+    pibcarpita_1 = (float) (pib_1 * 1e9) / populacao_1;
+
     // Segunda carta
     char codestado_2;
     char codccidade_2[3];
     char cidade_2[50];
     int populacao_2, turistico_2;
     float area_2, pib_2;
+    float densidade_2;
+    float pibcarpita_2;
 
     printf("\nAgora vamos para a próxima carta! \n");
 
@@ -60,6 +67,9 @@ int main() {
     printf("Digite a quantidade de pontos turísticos da cidade 2: \n");
     scanf("%d", &turistico_2);
 
+    densidade_2 = (float) populacao_2 / area_2;
+    pibcarpita_2 = (float) (pib_2 * 1e9) / populacao_2;
+
     // Exibição dos dados
     printf("\n===== DADOS CADASTRADOS =====\n");
 
@@ -69,8 +79,10 @@ int main() {
     printf("Nome da Cidade: %s\n", cidade_1);
     printf("População da Cidade: %d\n", populacao_1);
     printf("Área da Cidade: %.2f km²\n", area_1);
-    printf("PIB da Cidade: %.2f bilhões\n", pib_1);
+    printf("PIB da Cidade: %.2f bilhões de reais\n", pib_1);
     printf("Pontos Turísticos da Cidade: %d\n", turistico_1);
+    printf("Densidade Populacional: %.2f hab/km² \n", densidade_1);
+    printf("PIB per Capita: %.2f reais \n", pibcarpita_1);
 
     printf("\n--- CARTA 2 ---\n");
     printf("Código do Estado: %c\n", codestado_2);
@@ -78,8 +90,10 @@ int main() {
     printf("Nome da Cidade: %s\n", cidade_2);
     printf("População da Cidade: %d\n", populacao_2);
     printf("Área da Cidade: %.2f km²\n", area_2);
-    printf("PIB da Cidade: %.2f bilhões\n", pib_2);
+    printf("PIB da Cidade: %.2f bilhões de reais\n", pib_2);
     printf("Pontos Turísticos da Cidade: %d\n", turistico_2);
+    printf("Densidade Populacional: %.2f hab/km² \n", densidade_2);
+    printf("PIB per Capita: %.2f reais \n", pibcarpita_2);
 
     return 0;
 }
